@@ -8,11 +8,13 @@ buildscript {
     repositories {
 		maven { url = 'https://files.minecraftforge.net/maven' }
         maven { url = "https://repo.spongepowered.org/maven" }
-        jcenter()
-        mavenCentral()
+        maven { url 'https://jitpack.io' }
 		mavenLocal()
 	}
     dependencies {
-		classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+
+        classpath 'com.github.CreativeMD:MixinGradle:-SNAPSHOT'
+		//classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
